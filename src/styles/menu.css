@@ -1,0 +1,155 @@
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#dishes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 18px;
+    width: 25%;
+    padding: 20px;
+    background-color: var(--color-neutral-0);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dish-heart {
+    position: absolute;
+    background-color: var(--color-primary-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.563rem;
+    color: var(--color-primary-1);
+    width: 70px;
+    height: 70px;
+    right: -10px;
+    top: -10px;
+    border-radius: 0px 37.5px 0px 42.5px;
+}
+
+.dish-description {
+    color: #434343;
+    text-align: center;
+}
+
+.dish-rate i {
+    color: var(--color-primary-6);
+}
+
+.dish-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1170px) {
+    #dishes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dish {
+        width: calc(50% - 12px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dish {
+        width: 100%;
+    }
+
+    #menu .section-subtitle {
+        text-align: center;
+    }
+} 
+
+
+
+
+/* Estilos para a seção de conteúdo */
+.dish-content {
+    flex: 2;
+    padding: 30px; /* Aumenta o padding para mais espaço interno */
+    background-color: #ffffff; /* Fundo branco para melhor contraste */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave e marcante */
+    transition: box-shadow 0.3s ease; /* Transição suave para hover */
+}
+
+/* Efeito hover para a caixa de texto */
+.dish-content:hover {
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+}
+
+.dish-title {
+    font-size: 32px; /* Aumenta um pouco mais o tamanho para maior destaque */
+    color: #2c3e50; /* Cor mais escura e rica para o título */
+    font-weight: 700; /* Peso da fonte mais forte */
+    margin-bottom: 20px; /* Espaço maior abaixo do título */
+    font-family: 'Arial', 'Helvetica', sans-serif; /* Fonte mais moderna */
+    text-align: center; /* Centraliza o título */
+    border-bottom: 3px solid #e0e0e0; /* Linha mais espessa abaixo do título para destaque */
+    padding-bottom: 15px; /* Aumenta o espaço abaixo da linha */
+    letter-spacing: 1px; /* Espaçamento entre letras para um efeito mais aberto */
+}
+
+.dish-description {
+    font-size: 18px; /* Tamanho da fonte para melhor legibilidade */
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para mais conforto */
+    color: #444; /* Cor de texto um pouco mais escura para contraste */
+    text-align: justify; /* Justificação para um alinhamento perfeito */
+    font-family: 'Georgia', serif; /* Fonte serifada para um toque mais elegante */
+    margin-top: 15px; /* Aumenta o espaço acima do texto */
+    padding: 10px; /* Adiciona padding para melhor espaçamento interno */
+    border-left: 4px solid #3498db; /* Adiciona uma borda à esquerda para destaque */
+    background-color: #f4f4f4; /* Fundo levemente cinza para a descrição */
+}
+
+
+/* Estilo para o contêiner da imagem */
+.dish-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 350px; /* Aumentado o tamanho máximo da imagem */
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 12px; /* Arredonda o contêiner */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo da imagem */
+.dish-image {
+    width: 100%;
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+/* Efeito hover para o contêiner */
+.dish-image-container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+    transform: translateY(-5px); /* Elevação suave ao passar o mouse */
+}
+
+/* Efeito hover para a imagem */
+.dish-image-container:hover .dish-image {
+    transform: scale(1.1); /* Aumentado para uma ampliação maior da imagem */
+}

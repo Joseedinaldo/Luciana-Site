@@ -1,0 +1,231 @@
+/* Estilo geral da seção de agendamentos */
+#appointment {
+    padding: 40px 20px; /* Espaçamento interno */
+}
+
+/* Títulos da seção */
+.section-title {
+    font-size: 2.5rem; /* Tamanho da fonte maior para o título */
+    color: #333; /* Cor escura para o título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.section-subtitle {
+    font-size: 1.5rem; /* Tamanho da fonte menor para o subtítulo */
+    color: #666; /* Cor mais clara para o subtítulo */
+    margin-bottom: 20px; /* Espaçamento abaixo do subtítulo */
+}
+
+/* Estilo do container do calendário */
+#calendar-container {
+    background-color: #fff; /* Cor de fundo branco para o calendário */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo do cabeçalho do calendário */
+#calendar-header {
+    display: flex; /* Usar flexbox para layout */
+    justify-content: space-between; /* Espaçamento entre os elementos */
+    align-items: center; /* Alinhamento central vertical */
+    margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
+}
+
+/* Estilo dos botões do cabeçalho */
+#calendar-header button {
+    background-color: #808080; /* Cor de fundo cinza */
+    color: white; /* Cor do texto branco */
+    border: none; /* Remover bordas padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 10px 15px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+#calendar-header button:hover {
+    background-color: #666; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo dos dias da semana */
+#weekdays {
+    display: grid; /* Usar grid para layout */
+    grid-template-columns: repeat(7, 1fr); /* 7 colunas iguais */
+    margin-bottom: 10px; /* Espaçamento abaixo da grade */
+}
+
+.day-name {
+    font-weight: bold; /* Negrito para os dias */
+    text-align: center; /* Centralizar texto */
+    color: #555; /* Cor do texto mais clara */
+}
+
+/* Estilo do calendário */
+#calendar {
+    display: grid; /* Usar grid para layout */
+    grid-template-columns: repeat(7, 1fr); /* 7 colunas para os dias */
+    gap: 10px; /* Espaçamento entre os dias */
+}
+
+/* Estilo das células do calendário */
+#calendar div {
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    text-align: center; /* Centralizar texto */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+#calendar div:hover {
+    background-color: orange; /* Cor de fundo laranja ao passar o mouse */
+    color: white; /* Cor do texto branco ao passar o mouse */
+}
+
+/* Estilo da data selecionada */
+#selected-date {
+    margin-top: 20px; /* Espaçamento acima da data selecionada */
+    text-align: center; /* Centralizar texto */
+    color: #333; /* Cor do texto */
+}
+
+#availability-message {
+    margin-top: 10px; /* Espaçamento acima da mensagem de disponibilidade */
+    color: #808080; /* Cor cinza para a mensagem de disponibilidade */
+    font-weight: bold; /* Negrito para a mensagem */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Seção de agendamentos */
+    #appointment {
+        padding: 30px 10px; /* Reduzir o espaçamento em telas menores */
+    }
+
+    /* Títulos */
+    .section-title {
+        font-size: 2rem; /* Diminuir o tamanho do título */
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem; /* Diminuir o tamanho do subtítulo */
+    }
+
+    /* Botões do cabeçalho */
+    #calendar-header button {
+        padding: 8px 12px; /* Ajustar o espaçamento dos botões */
+        font-size: 0.9rem; /* Diminuir o tamanho da fonte dos botões */
+    }
+
+    /* Dias da semana */
+    .day-name {
+        font-size: 0.9rem; /* Diminuir o tamanho da fonte dos dias */
+    }
+
+    /* Calendário */
+    #calendar {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas para telas menores */
+    }
+
+    #calendar div {
+        padding: 10px; /* Diminuir o espaçamento interno nas células */
+        font-size: 0.9rem; /* Diminuir o tamanho da fonte das células */
+    }
+
+    /* Mensagem de data selecionada */
+    #selected-date {
+        font-size: 1rem; /* Diminuir o tamanho da fonte */
+    }
+
+    #availability-message {
+        font-size: 0.9rem; /* Diminuir o tamanho da fonte da mensagem */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Para dispositivos muito pequenos, como celulares */
+    #calendar {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+
+    #calendar div {
+        font-size: 0.8rem; /* Diminuir ainda mais o tamanho da fonte */
+    }
+}
+
+
+
+
+/* Estilo do rótulo (label) */
+label {
+    font-size: 1.2rem; /* Tamanho da fonte do rótulo */
+    color: #34495e; /* Cor escura para o rótulo */
+    margin-bottom: 8px; /* Espaçamento abaixo do rótulo */
+    display: block; /* Faz o rótulo ocupar toda a linha */
+    font-weight: bold; /* Negrito para o rótulo */
+    transition: color 0.3s; /* Transição suave para mudanças de cor */
+}
+
+/* Efeito ao focar no seletor */
+select:focus + label {
+    color: #3498db; /* Muda a cor do rótulo ao focar no seletor */
+}
+
+/* Estilo do seletor (select) */
+select {
+    width: 100%; /* Largura total para se adaptar ao contêiner */
+    max-width: 300px; /* Define um limite máximo de largura */
+    padding: 10px; /* Ajusta o padding */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 1px solid #bdc3c7; /* Borda cinza clara */
+    background-color: #ffffff; /* Fundo branco */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #34495e; /* Cor do texto */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+    margin-bottom: 20px; /* Espaçamento abaixo do seletor */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+/* Efeito ao focar no seletor */
+select:focus {
+    border-color: #3498db; /* Cor azul ao focar */
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25); /* Sombra ao focar */
+}
+
+/* Responsividade adicional */
+@media (max-width: 768px) {
+    select {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    select {
+        padding: 8px; /* Reduz o padding em dispositivos pequenos */
+        font-size: 0.8rem; /* Diminuir ainda mais o tamanho da fonte */
+    }
+}
+
+
+
+.slots-container {
+    display: flex; /* Usar flexbox para layout */
+    flex-wrap: wrap; /* Permitir quebra de linha */
+    gap: 10px; /* Espaçamento entre os cartões */
+}
+
+.slot-card {
+    background-color: #f9f9f9; /* Fundo claro */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    flex: 1 0 100px; /* Largura mínima dos cartões */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
+}
+
+.slot-card:hover {
+    background-color: #e0e0e0; /* Fundo levemente mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}

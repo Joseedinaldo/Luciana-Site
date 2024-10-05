@@ -1,0 +1,56 @@
+#benefits {
+    padding: 60px 20px; /* Aumentar o padding */
+    text-align: center;
+    
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Espaçamento entre os cards */
+    margin-top: 30px; /* Espaçamento acima dos cards */
+}
+
+.benefit-card {
+  
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra do card */
+    padding: 30px; /* Espaçamento interno */
+    width: 280px; /* Largura do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transições suaves */
+    overflow: hidden; /* Evitar que o texto saia do card */
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px); /* Elevar o card ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Sombra mais intensa ao passar o mouse */
+    background-color: #f0f8ff; /* Mudança suave de cor ao passar o mouse */
+}
+
+.benefit-card i {
+    font-size: 3rem; /* Tamanho do ícone */
+    color: orange; /* Cor vibrante para os ícones */
+    margin-bottom: 15px; /* Espaçamento abaixo do ícone */
+}
+
+.benefit-card h4 {
+    margin: 15px 0 10px; /* Margens do título */
+    font-size: 1.6rem; /* Tamanho do título */
+    color: #2c3e50; /* Cor escura para o título */
+}
+
+.benefit-card p {
+    color: #555; /* Cor do texto */
+    font-size: 1.1rem; /* Tamanho do texto */
+    line-height: 1.6; /* Altura da linha para legibilidade */
+    margin: 0; /* Remover margens padrão */
+}
+
+/* Melhorar responsividade */
+@media (max-width: 768px) {
+    .benefit-card {
+        width: 100%; /* Fazer o card ocupar toda a largura em telas menores */
+        max-width: 300px; /* Limitar a largura máxima */
+    }
+}
